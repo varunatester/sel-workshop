@@ -1,14 +1,11 @@
-import LoginPage from  '../pageobjects/login.page';
-import SecurePage from '../pageobjects/secure.page';
-
-describe('My Login application', () => {
-    it('should login with valid credentials', () => {
-        LoginPage.open();
-
-        LoginPage.login('tomsmith', 'SuperSecretPassword!');
-        expect(SecurePage.flashAlert).toBeExisting();
-        expect(SecurePage.flashAlert).toHaveTextContaining(
-            'You logged into a secure area!');
+describe('My web application', () => {
+    it('should add item to cart', () => {
+      browser.maximizeWindow();
+      browser.url("http://www.amazon.in");
+      $("#twotabsearchtextbox").setValue('book\uE007');
+      $('div[data-index="1"] span[data-component-type="s-product-image"] a div').click();
+      browser.switchToWindow(browser.getWindowHandles()[1]);
+      $('#add-to-cart-button').click();
     });
 });
 
