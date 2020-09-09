@@ -38,5 +38,9 @@ This project is to demonstrate creating a test framework for sample application 
      * `allure generate allure-results`
   * Open a report using   
      * `allure open allure-report`  
+     
+    **Workshop Demo** 
+  * During workshop you could checkout chapters in different branch
+    * `git checkout chapter1`  
   
   
