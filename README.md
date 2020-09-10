@@ -43,11 +43,11 @@ This project is to demonstrate creating a test framework for sample application 
   * Run the following command to install allure
      ```sh
           $ npm install @wdio/allure-reporter --save-dev
-          $ npm install -g allure-commandline --save-dev 
+          $ npm install allure-commandline --save-dev 
   * Generate a report using
     
      ```sh
-     $ allure generate allure-results
+     $ allure generate -c -o allure-report
      ``` 
   * Open a report using   
    
