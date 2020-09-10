@@ -1,4 +1,4 @@
-export default class ItemPage {
+class ItemPage {
 
     get cartButton() {
         return $('#add-to-cart-button');
@@ -8,3 +8,4 @@ export default class ItemPage {
         this.cartButton.click();
     }
 }
+ export default new ItemPage()
