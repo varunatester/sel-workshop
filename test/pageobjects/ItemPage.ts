@@ -1,4 +1,9 @@
-class ItemPage {
+interface IItemPage{
+    cartButton : WebdriverIO.Element;
+    addItemToCart() : void;
+}
+
+class ItemPage implements IItemPage {
 
     get cartButton() {
         return $('#add-to-cart-button');

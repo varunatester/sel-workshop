@@ -1,9 +1,15 @@
-class SearchResultsPage {
+interface ISearchResultsPage{
+    toolBarText : WebdriverIO.Element;
+    getSearchText() : string;
+    navigateToItem(index:number) : void;
+}
+
+class SearchResultsPage implements ISearchResultsPage{
     get toolBarText() {
         return $("span[cel_widget_id=\"UPPER-RESULT_INFO_BAR\"] div span.a-color-state");
     }
 
-    getSearchText(): string {
+    getSearchText() {
         return this.toolBarText.getText();
     }
 

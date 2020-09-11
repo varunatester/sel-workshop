@@ -1,7 +1,11 @@
-import SearchResultsPage from "./SearchResultsPage";
 import BasePage from "./BasePage";
 
-class HomePage extends BasePage {
+interface IHomePage{
+    searchTerm : WebdriverIO.Element;
+    searchFor(searchTerm : string) : void;
+}
+
+class HomePage extends BasePage implements IHomePage{
     constructor() {
         super();
     }
@@ -10,7 +14,7 @@ class HomePage extends BasePage {
         return $('#twotabsearchtextbox');
     }
 
-    searchFor(searchTerm: string): void {
+    searchFor(searchTerm: string) {
         let key = searchTerm + "\uE007"
         this.searchTerm.setValue(key);
     }
