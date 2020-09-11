@@ -27,39 +27,45 @@ This project is to demonstrate creating a test framework for sample application 
  * `npm install chai mocha ts-node @types/chai @types/mocha --save-dev`  
  
  
- **Run Test:**
+**Run Test:**
  
  * ```sh
    $ npx wdio run wdio.conf.js
-   
+   ```
  
  * Once you have configured the test script in package.json descriptor under scripts section,then you could run your test using command 
- * ```sh
-    $ npm test
-
+     
+     ```sh
+     $ npm test
+     ```
  
-  **Reporting:**
+**Reporting:**
   * We would integrate allure reporting to our app https://webdriver.io/docs/allure-reporter.html
   * Run the following command to install allure
+  
      ```sh
-          $ npm install @wdio/allure-reporter --save-dev
-          $ npm install allure-commandline --save-dev 
+     $ npm install @wdio/allure-reporter --save-dev
+     $ npm install allure-commandline --save-dev
+     ``` 
+    
   * Generate a report using
     
      ```sh
      $ allure generate -c -o allure-report
      ``` 
+    
   * Open a report using   
    
      ```sh
      $ allure open allure-report
      ``` 
      
-    **Workshop Demo** 
+  **Workshop Demo** 
   * During workshop you could checkout chapters in different branch
-       ```sh
-         $ git checkout chapter1
-         $ git checkout chapter2
-         $ git checkout chapter3 
   
-  
+    ```sh
+    $ git checkout chapter1
+    $ git checkout chapter2
+    $ git checkout chapter3 
+    $ git checkout chapter4 
+    ```
