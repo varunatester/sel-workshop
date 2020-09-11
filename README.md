@@ -1,4 +1,5 @@
 # sel-workshop
+====================
 
 **Introduction:**
 
@@ -12,31 +13,59 @@ This project is to demonstrate creating a test framework for sample application 
  * For easy install use https://nodejs.org/en/download/ to download Node.js and NPM
  * To be more in control of each version use Node Version Manager, see instructions here https://github.com/nvm-sh/nvm
  * If you run `node -v` you could see the version installed
- * If you run `npm -v` 6.14.4 you could see the node package manager version installed
+ * If you run `npm -v`  you could see the node package manager version installed
 
 **Getting Started:**
  We would be executing the following commands during demo to perform setup and get started
+ 
  * `npm init -y` This will generate package.json
  * `npm i -D @wdio/cli`
- *  `npx wdio config`
+ * `npx wdio config`
  * `tsc --init`  This will create a tsconfig.json
-  * `npm install --save-dev typescript` 
-  * `npm install ts-node --save-dev`
-  * `npm install chai mocha ts-node @types/chai @types/mocha --save-dev`  
+ * `npm install --save-dev typescript` 
+ * `npm install ts-node --save-dev`
+ * `npm install chai mocha ts-node @types/chai @types/mocha --save-dev`  
  
  
- **Run Test:**
- * `npx wdio run wdio.conf.ts`
- * Once you have configured the test script in package.json descriptor under scripts section,then you could run your test using command `npm test`
+**Run Test:**
  
-  **Reporting:**
+ * ```sh
+   $ npx wdio run wdio.conf.js
+   ```
+ 
+ * Once you have configured the test script in package.json descriptor under scripts section,then you could run your test using command 
+     
+     ```sh
+     $ npm test
+     ```
+ 
+**Reporting:**
   * We would integrate allure reporting to our app https://webdriver.io/docs/allure-reporter.html
   * Run the following command to install allure
-     * `npm install @wdio/allure-reporter --save-dev`
-     * `npm install -g allure-commandline --save-dev`
-  * Generate a report using  
-     * `allure generate allure-results`
+  
+     ```sh
+     $ npm install @wdio/allure-reporter --save-dev
+     $ npm install allure-commandline --save-dev
+     ``` 
+    
+  * Generate a report using
+    
+     ```sh
+     $ allure generate -c -o allure-report
+     ``` 
+    
   * Open a report using   
-     * `allure open allure-report`  
+   
+     ```sh
+     $ allure open allure-report
+     ``` 
+     
+  **Workshop Demo** 
+  * During workshop you could checkout chapters in different branch
   
-  
+    ```sh
+    $ git checkout chapter1
+    $ git checkout chapter2
+    $ git checkout chapter3 
+    $ git checkout chapter4 
+    ```
