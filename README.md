@@ -19,13 +19,9 @@ This project is to demonstrate creating a test framework for sample application 
  We would be executing the following commands during demo to perform setup and get started
  
  * `npm init -y` This will generate package.json
- * `npm i -D @wdio/cli`
+ * `npm i -D @wdio/cli typescript ts-node chai mocha @types/chai @types/mocha`
  * `npx wdio config`
- * `tsc --init`  This will create a tsconfig.json
- * `npm install --save-dev typescript` 
- * `npm install ts-node --save-dev`
- * `npm install chai mocha ts-node @types/chai @types/mocha --save-dev`  
- 
+ * `npx tsc --init` this will create a tsconfig.json file 
  
 **Run Test:**
  
